@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="coursera-oojava-sun:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/coursera_oojava_sun_jar</output-path>
+    <root id="archive" name="coursera-oojava.jar">
+      <element id="module-output" name="coursera-oojava" />
+      <element id="extracted-dir" path="/Applications/Processing.app/Contents/Java/core/library/core.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
