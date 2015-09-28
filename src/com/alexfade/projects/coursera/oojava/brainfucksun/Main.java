@@ -1,8 +1,10 @@
-package com.alexfade.projects.coursera.brainfucksun;
+package com.alexfade.projects.coursera.oojava.brainfucksun;
+
+/**
+ *  For Processing look at https://www.processing.org/
+ */
 
 import processing.core.*;
-
-import java.util.Date;
 import java.util.Random;
 
 public class Main extends PApplet {
@@ -29,9 +31,26 @@ public class Main extends PApplet {
         fill(rndR.nextInt(), rndG.nextInt(), rndB.nextInt());
 
         ellipse(50, 50, 60, 60);
+
+        int[] color = sunColorSec(second());
+        fill(color[0], color[1], color[2]);
+        ellipse(150, 50, 60, 60);
+    }
+
+    private int[] sunColorSec(float sec) {
+        int[] rgb = new int[3];
+
+        float diffFrom30 = Math.abs(30-sec);
+        float ratio = diffFrom30/30;
+
+        rgb[0] = (int)(255*ratio);
+        rgb[1] = (int)(255*ratio);
+        rgb[2] = 0;
+
+        return rgb;
     }
 
     public static void main(String args[]) {
-        PApplet.main(new String[]{"--present", "com.alexfade.projects.coursera.brainfucksun.Main"});
+        PApplet.main(new String[]{"--present", "com.alexfade.projects.coursera.oojava.brainfucksun.Main"});
     }
 }
